@@ -1,0 +1,45 @@
+{
+  "_comment": "Neutral example config for the claim-chart generator. Replace every placeholder with case-specific values before use.",
+  "patentNumber": "US 00,000,000",
+  "accusedParty": "ExampleCo",
+  "outputPath": "/tmp/example_claim_chart.docx",
+  "footerText": "Confidential",
+  "claimElements": [
+    "1. An autonomous vehicle (AV) control system comprising:",
+    "a) a communication module receiving vehicle-specific control instructions from one or more external infrastructure devices; and",
+    "b) a vehicle control module controlling a vehicle according to said vehicle-specific control instructions,",
+    "wherein said vehicle-specific control instructions comprise instructions for vehicle position, speed, steering, or control."
+  ],
+  "references": [
+    { "id": 1, "url": "https://example.com/product-overview" },
+    { "id": 2, "url": "https://example.com/technical-architecture" },
+    { "id": 3, "url": "https://example.com/safety-report" }
+  ],
+  "mappingData": [
+    ["Autonomous Vehicle Control System", "ExampleCo's autonomous vehicle platform"],
+    ["Communication Module", "ExampleCo's external-infrastructure communication module"],
+    ["Vehicle Control Module", "ExampleCo's onboard control software"],
+    ["Vehicle-Specific Control Instructions", "ExampleCo's route, speed, steering, and control instructions"]
+  ],
+  "claimGroups": [
+    {
+      "claimElementIndices": [0],
+      "comment": {
+        "introText": [
+          "ExampleCo's autonomous vehicle platform integrates perception, planning, communications, and control functions that allow a vehicle to operate according to system-generated driving instructions.",
+          "ExampleCo materials describe an onboard computing system that receives information from external infrastructure and uses that information with vehicle state data to generate driving-control outputs."
+        ],
+        "herein": {
+          "claimPhrase": "an autonomous vehicle (AV) control system",
+          "productPhrase": "ExampleCo's autonomous vehicle platform",
+          "post": ", which integrates communication, planning, and vehicle-control functionality."
+        }
+      },
+      "evidenceBlocks": [
+        { "refId": 1, "url": "https://example.com/product-overview", "images": ["/tmp/claim_evidence/staged/img_003.png"] },
+        { "refId": 2, "url": "https://example.com/technical-architecture", "images": ["/tmp/claim_evidence/staged/img_004.png"] },
+        { "refId": 3, "url": "https://example.com/safety-report", "images": ["/tmp/claim_evidence/staged/img_001.png", "/tmp/claim_evidence/staged/img_002.png"] }
+      ]
+    }
+  ]
+}
